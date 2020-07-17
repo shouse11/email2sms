@@ -9,7 +9,7 @@ module.exports = (req, res) => {
 
     //Create Email
     const email = {
-        to: 'shouse@docuwrx.com'
+        to: process.env.TO_EMAIL_ADDRESS,
         from: fromAddress,
         subject: `New SMS message from: ${req.body.From}`,
         text: req.body.Body,
